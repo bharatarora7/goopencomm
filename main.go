@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	db, err := sql.Open("mysql", "root:root@tcp(10.102.169.126:3306)/opencommdb")
+	db, err := sql.Open("mysql", "root:root@tcp(localhost:3306)/opencommdb")
 	if err != nil {
 		fmt.Print(err.Error())
 	}
