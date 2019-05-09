@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	db, err := sql.Open("mysql", "root:root@tcp(bharat.ca.com:3306)/opencommdb")
+	db, err := sql.Open("mysql", "root:root@tcp(10.102.169.126:3306)/opencommdb")
 	if err != nil {
 		fmt.Print(err.Error())
 	}
@@ -32,7 +32,7 @@ func main() {
 	router.GET("/customers/:id", func(c *gin.Context) {
 		var (
 			customer Customer
-			result gin.H
+			result   gin.H
 		)
 		id := c.Param("id")
 		row := db.QueryRow("select id, first_name, last_name from customers where id = ?;", id)
