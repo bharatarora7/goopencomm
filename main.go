@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+
 	//db, err := sql.Open("mysql", "root:root@tcp(10.102.169.126:3306)/opencommdb")
 	// For AKS
 	db, err := sql.Open("mysql", "root:root@tcp(mysql-service:3306)/opencommdb")
