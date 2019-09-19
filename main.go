@@ -32,7 +32,7 @@ func main() {
 	}
 	router := gin.Default()
 
-	// GET a customer detail
+	// GET a customer detail based on the id
 	router.GET("/customers/:id", func(c *gin.Context) {
 		var (
 			customer Customer
